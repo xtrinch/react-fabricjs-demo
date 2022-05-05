@@ -1,15 +1,16 @@
-# Sensor dashboard - react frontend
+# React - fabric.js demo
 
-This is the frontend repo for the environmetal sensor dashboard.
+This is a demo repo of a small 2d floor planner with fabric.js. It supports zooming, panning, drag and drop of components onto the canvas, moving and rotating the components on the canvas.
 
-See also [backend](https://github.com/xtrinch/sensor-dashboard-nestjs-backend) and [sensor board code](https://github.com/xtrinch/sensor-dashboard-ESP32-BME680-reader), or [see it live](http://iotfreezer.com) with some sensor data from my living room.
+# Images
+
+![alt tag](https://raw.githubusercontent.com/xTrinch/react-fabricjs-demo/master/images/demo.jpg)
 
 ## Technology stack:
 
 - React
-- React context for state management
-- Eslint for linting
-- ReCharts for chart display
+- Fabric.js
+- Material.UI
 
 ## Setup
 

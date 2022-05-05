@@ -16,9 +16,9 @@ export interface BoardState {
 export default class Board implements AbstractEntity {
   constructor(b) {
     this.state = b.state;
-    Object.values(this.state).forEach((v) => {
-      v.sensor = new Sensor(v.sensor);
-    });
+    // Object.values(this.state).forEach((v) => {
+    //   v.sensor = new Sensor(v.sensor);
+    // });
     this.boardX = b.boardX;
     this.boardY = b.boardY;
     this.scale = b.scale;

@@ -2,15 +2,6 @@ import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { WithStyles } from '@mui/styles';
 import createStyles from '@mui/styles/createStyles';
 import withStyles from '@mui/styles/withStyles';
-import { AccountContextProvider } from 'context/AccountContext';
-import { AppContextProvider } from 'context/AppContext';
-import { BoardContextProvider } from 'context/BoardContext';
-import { ConfirmationContextProvider } from 'context/ConfirmationContext';
-import { DisplayContextProvider } from 'context/DisplayContext';
-import { ErrorContextProvider } from 'context/ErrorContext';
-import { SensorContextProvider } from 'context/SensorContext';
-import { ToastContextProvider } from 'context/ToastContext';
-import { UserContextProvider } from 'context/UserContext';
 import theme from 'layout/Theme';
 import { observer } from 'mobx-react-lite';
 import Pages from 'pages/Pages';
@@ -47,25 +38,7 @@ const App: React.FunctionComponent<WithStyles<typeof styles>> = (props) => {
     <BrowserRouter>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
-          <ToastContextProvider>
-            <AccountContextProvider>
-              <AppContextProvider>
-                <SensorContextProvider>
-                  <BoardContextProvider>
-                    <ConfirmationContextProvider>
-                      <DisplayContextProvider>
-                        <UserContextProvider>
-                          <ErrorContextProvider>
-                            <Pages />
-                          </ErrorContextProvider>
-                        </UserContextProvider>
-                      </DisplayContextProvider>
-                    </ConfirmationContextProvider>
-                  </BoardContextProvider>
-                </SensorContextProvider>
-              </AppContextProvider>
-            </AccountContextProvider>
-          </ToastContextProvider>
+          <Pages />
         </ThemeProvider>
       </StyledEngineProvider>
     </BrowserRouter>
